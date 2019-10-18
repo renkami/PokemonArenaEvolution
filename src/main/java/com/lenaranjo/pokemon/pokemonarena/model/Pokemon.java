@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.lenaranjo.pokemon.pokemonarena.model.Types;
+import com.lenaranjo.pokemon.pokemonarena.model.Stats;
 
 import lombok.Data;
 
@@ -14,9 +15,10 @@ public class Pokemon implements Comparable<Pokemon> {
 	private String name;
 	private String url;
 	private Sprites sprites;
-	private List<Types> types;
 	private String weight;
 	private String height;
+	private List<Types> types;
+	private List<Stats> stats;
 
 	@Override
 	public int compareTo(Pokemon o) {

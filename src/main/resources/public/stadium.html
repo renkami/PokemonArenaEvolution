@@ -1,286 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      id="page_favicon"
-      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/319hf99fYX/fX2F/319hf8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////////////////////99fYX/fX2F/319hf8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////wAAAP8AAAD/fX2F/319hf99fYX/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////8AAAD/AAAA/wAAAP99fYX/fX2F/wAAAP8AAAD/AAAA/319hf8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/HBT//xwU//8AAAD//////319hf8AAAD/Dgim/w4Ipv8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/HBT//xwU//8cFP//HBT//wAAAP8AAAD/Dgim/w4Ipv8OCKb/Dgim/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/xwU//8cFP//HBT//xwU/44cFP//HBT//xwU//8cFP//Dgim/w4Ipv8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/HBT//xwU/47/////HBT/jhwU//8cFP//HBT//w4Ipv8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/xwU//8cFP//HBT/jhwU//8OCKb/Dgim/w4Ipv8OCKb/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/xwU//8OCKb/Dgim/w4Ipv8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPw/AADwDwAA4AcAAOAHAADAAwAAwAMAAMADAADAAwAA4AcAAOAHAADwDwAA/D8AAP//AAD//wAA//8AAA=="
-      rel="icon"
-      type="image/x-icon"
-    />
-    <title>Pokemon League Arena</title>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link id="page_favicon"
+	href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/319hf99fYX/fX2F/319hf8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////////////////////99fYX/fX2F/319hf8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////wAAAP8AAAD/fX2F/319hf99fYX/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////8AAAD/AAAA/wAAAP99fYX/fX2F/wAAAP8AAAD/AAAA/319hf8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/HBT//xwU//8AAAD//////319hf8AAAD/Dgim/w4Ipv8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/HBT//xwU//8cFP//HBT//wAAAP8AAAD/Dgim/w4Ipv8OCKb/Dgim/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/xwU//8cFP//HBT//xwU/44cFP//HBT//xwU//8cFP//Dgim/w4Ipv8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/HBT//xwU/47/////HBT/jhwU//8cFP//HBT//w4Ipv8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/xwU//8cFP//HBT/jhwU//8OCKb/Dgim/w4Ipv8OCKb/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/xwU//8OCKb/Dgim/w4Ipv8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPw/AADwDwAA4AcAAOAHAADAAwAAwAMAAMADAADAAwAA4AcAAOAHAADwDwAA/D8AAP//AAD//wAA//8AAA=="
+	rel="icon" type="image/x-icon" />
+<title>Pokemon League Arena</title>
 
-    <!-- Custom fonts for this template-->
-    <link
-      href="/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
+<!-- Custom fonts for this template-->
+<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet" />
 
-    <!-- Custom styles for this template-->
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet" />
-    
-    <link
-      href="/vendor/datatables/dataTables.bootstrap4.min.css"
-      rel="stylesheet"
-    />
-  </head>
+<!-- Custom styles for this template-->
+<link href="/css/sb-admin-2.min.css" rel="stylesheet" />
 
-  <body id="page-top" class="sidebar-toggled">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-      <!-- Sidebar -->
-      <ul
-        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
-        id="accordionSidebar"
-      >
-        <!-- Sidebar - Brand -->
-        <a
-          class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="/"
-        >
-          <div class="sidebar-brand-icon rotate-n-15">
-            <img class="img-fluid px-3" src="/img/pokeball.svg" alt="" />
-          </div>
-          <div class="sidebar-brand-text mx-3">Pokemon Arena</div>
-        </a>
+<link href="/vendor/datatables/dataTables.bootstrap4.min.css"
+	rel="stylesheet" />
+</head>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
+<body id="page-top" class="sidebar-toggled">
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<ul
+			class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
+			id="accordionSidebar">
+			<!-- Sidebar - Brand -->
+			<a
+				class="sidebar-brand d-flex align-items-center justify-content-center"
+				href="/">
+				<div class="sidebar-brand-icon rotate-n-15">
+					<img class="img-fluid px-3" src="/img/pokeball.svg" alt="" />
+				</div>
+				<div class="sidebar-brand-text mx-3">Pokemon Arena</div>
+			</a>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0" />
 
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Pokemons
-        </div>
+			<!-- Divider -->
+			<hr class="sidebar-divider" />
 
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-          <a class="nav-link" href="/stadium.html">
-            <i class="fas fa-user-ninja"></i>
-            <span>Stadium</span></a
-          >
-        </li>
+			<!-- Heading -->
+			<div class="sidebar-heading">Pokemons</div>
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-          <a class="nav-link" href="/pokedex.html">
-            <i class="fas fa-atlas"></i>
-            <span>Pokedex</span></a
-          >
-        </li>
+			<!-- Nav Item - Charts -->
+			<li class="nav-item"><a class="nav-link" href="/stadium.html">
+					<i class="fas fa-user-ninja"></i> <span>Stadium</span>
+			</a></li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block" />
+			<!-- Nav Item - Tables -->
+			<li class="nav-item"><a class="nav-link" href="/pokedex.html">
+					<i class="fas fa-atlas"></i> <span>Pokedex</span>
+			</a></li>
 
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-      </ul>
-      <!-- End of Sidebar -->
+			<!-- Divider -->
+			<hr class="sidebar-divider d-none d-md-block" />
 
-      <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
-        <!-- Main Content -->
-        <div id="content">
-          <!-- Topbar -->
-          <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
-          ><!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button></nav>
-          <!-- End of Topbar -->
+			<!-- Sidebar Toggler (Sidebar) -->
+			<div class="text-center d-none d-md-inline">
+				<button class="rounded-circle border-0" id="sidebarToggle"></button>
+			</div>
+		</ul>
+		<!-- End of Sidebar -->
 
-          <!-- Begin Page Content -->
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h1 class="m-0 font-weight-bold text-primary">
-                      Poke battle analizer
-                    </h1>
-                  </div>
-                  <div class="card-body">
-                    <p>
-                      Paste the array with the result with the correct template
-                      and clic on battle to see the results.
-                    </p>
-                    <div class="form-group">
-                      <textarea
-                        class="form-control"
-                        id="pokefight_result"
-                        name="pokefight_result"
-                        rows="3"
-                        placeholder='["pokemon1", "pokemon2", "pokemon3", "..."]'
-                      ></textarea>
-                    </div>
-                    <div class="my-2"></div>
-                    <button class="btn btn-success btn-icon-split btn-lg" onclick="validateBattles()">
-                      <span class="icon text-white-50">
-                        <i class="fas fa-check"></i>
-                      </span>
-                      <span class="text">Battle!!</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="error-container" class="row d-none">
-              <div class="col-12">
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h3 class="m-0 font-weight-bold text-danger">
-                      Uppps....
-                    </h3>
-                  </div>
-                  <div class="card-body">
-                    <p id="error-message">
-                      Paste the array with the result with the correct template
-                      and clic on battle to see the results.
-                    </p>
-                    <div class="my-2"></div>
-                    <button class="btn btn-danger btn-icon-split btn-lg" onclick="clearValidations()">
-                      <span class="icon text-white-50">
-                        <i class="fas fa-exclamation-triangle"></i>
-                      </span>
-                      <span class="text">Clean</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="result-container" class="row d-none">
-              <div class="col-12">
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h3 class="m-0 font-weight-bold text-primary">
-                      Results
-                    </h3>
-                  </div>
-                  <div class="card-body">
-                    <p>
-                      It took place a minimun of
-                      <span id="battleMin"></span> fights to get to this result.
-                    </p>
-                    <div class="table-responsive d-none" id="pokemonTableMaster">
-                    
-                    <p>Here are our fighters</p>
-                      <table
-                        class="table table-bordered"
-                        id="dataTable"
-                        width="100%"
-                        cellspacing="0"
-                      >
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th><i class="fas fa-camera"></i></th>
-                            <th>Name</th>
-                            <th class="d-none d-lg-table-cell">height (m)</th>
-                            <th class="d-none d-lg-table-cell">weight(kg)</th>
-                            <th>Types</th>
-                          </tr>
-                        </thead>
-                        <tfoot>
-                          <tr>
-                            <th>#</th>
-                            <th><i class="fas fa-camera"></i></th>
-                            <th>Name</th>
-                            <th class="d-none d-lg-table-cell">height (m)</th>
-                            <th class="d-none d-lg-table-cell">weight(kg)</th>
-                            <th>Types</th>
-                          </tr>
-                        </tfoot>
-                        <tbody id="pokemonTable" class="d-none"></tbody>
-                      </table>
-                    </div>
-                    <div class="my-2"></div>
-                    <button class="btn btn-primary btn-icon-split btn-lg" onclick="clearValidations()">
-                      <span class="icon text-white-50">
-                        <i class="fas fa-flag"></i>
-                      </span>
-                      <span class="text">Start over again</span>
-                    </button>
-                    <div class="modal fade" id="exampleModalCenter" tabindex="-1"
-                        role="dialog" aria-labelledby="exampleModalCenterTitle"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">
-                                        #<span id="pokemonId"> </span> - <span id="pokemonName">
-                                        </span>
-                                    </h5>
-                                    <button type="button" class="close" data-dismiss="modal"
-                                        aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <img id="pokemonImage" src="">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <p>Height:</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p id="pokemonHeight"></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <p>Weight:</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p id="pokemonWeight"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.container-fluid -->
-        </div>
-        <!-- End of Main Content -->
-      </div>
-      <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Page Wrapper -->
-    <script>
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+			<!-- Main Content -->
+			<div id="content">
+				<!-- Topbar -->
+				<nav
+					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+					<!-- Sidebar Toggle (Topbar) -->
+					<button id="sidebarToggleTop"
+						class="btn btn-link d-md-none rounded-circle mr-3">
+						<i class="fa fa-bars"></i>
+					</button>
+				</nav>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<div class="card shadow mb-4">
+								<div class="card-header py-3">
+									<h1 class="m-0 font-weight-bold text-primary">Poke battle
+										analizer</h1>
+								</div>
+								<div class="card-body">
+									<p>Paste the array with the result with the correct
+										template and clic on battle to see the results.</p>
+									<div class="form-group">
+										<textarea class="form-control" id="pokefight_result"
+											name="pokefight_result" rows="3"
+											placeholder='["pokemon1", "pokemon2", "pokemon3", "..."]'></textarea>
+									</div>
+									<div class="my-2"></div>
+									<button class="btn btn-success btn-icon-split btn-lg"
+										onclick="validateBattles()">
+										<span class="icon text-white-50"> <i
+											class="fas fa-check"></i>
+										</span> <span class="text">Battle!!</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="error-container" class="row d-none">
+						<div class="col-12">
+							<div class="card shadow mb-4">
+								<div class="card-header py-3">
+									<h3 class="m-0 font-weight-bold text-danger">Uppps....</h3>
+								</div>
+								<div class="card-body">
+									<p id="error-message">Paste the array with the result with
+										the correct template and clic on battle to see the results.</p>
+									<div class="my-2"></div>
+									<button class="btn btn-danger btn-icon-split btn-lg"
+										onclick="clearValidations()">
+										<span class="icon text-white-50"> <i
+											class="fas fa-exclamation-triangle"></i>
+										</span> <span class="text">Clean</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="result-container" class="row d-none">
+						<div class="col-12">
+							<div class="card shadow mb-4">
+								<div class="card-header py-3">
+									<h3 class="m-0 font-weight-bold text-primary">Results</h3>
+								</div>
+								<div class="card-body">
+									<p>
+										It took place a minimun of <span id="battleMin"></span> fights
+										to get to this result.
+									</p>
+									<div class="table-responsive d-none" id="pokemonTableMaster">
+
+										<p>Here are our fighters</p>
+										<table class="table table-bordered" id="dataTable"
+											width="100%" cellspacing="0">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th><i class="fas fa-camera"></i></th>
+													<th>Name</th>
+													<th class="d-none d-lg-table-cell">height (m)</th>
+													<th class="d-none d-lg-table-cell">weight(kg)</th>
+													<th>Types</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th>#</th>
+													<th><i class="fas fa-camera"></i></th>
+													<th>Name</th>
+													<th class="d-none d-lg-table-cell">height (m)</th>
+													<th class="d-none d-lg-table-cell">weight(kg)</th>
+													<th>Types</th>
+												</tr>
+											</tfoot>
+											<tbody id="pokemonTable" class="d-none"></tbody>
+										</table>
+									</div>
+									<div class="my-2"></div>
+									<button class="btn btn-primary btn-icon-split btn-lg"
+										onclick="clearValidations()">
+										<span class="icon text-white-50"> <i
+											class="fas fa-flag"></i>
+										</span> <span class="text">Start over again</span>
+									</button>
+									<div class="modal fade" id="exampleModalCenter" tabindex="-1"
+										role="dialog" aria-labelledby="exampleModalCenterTitle"
+										aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered"
+											role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title">
+														#<span id="pokemonId"> </span> - <span id="pokemonName">
+														</span>
+													</h5>
+													<button type="button" class="close" data-dismiss="modal"
+														aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div class="row">
+														<div class="col-4">
+															<img id="pokemonImage" src="">
+														</div>
+														<div class="col-8">
+															<div class="row">
+																<div class="col-3">
+																	<p>Height:</p>
+																</div>
+																<div class="col-9">
+																	<p id="pokemonHeight"></p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-3">
+																	<p>Weight:</p>
+																</div>
+																<div class="col-9">
+																	<p id="pokemonWeight"></p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div>
+														<p class="font-weight-bold">Stats:</p>
+													</div>
+													<div class="" id="pokemonStats"></div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.container-fluid -->
+			</div>
+			<!-- End of Main Content -->
+		</div>
+		<!-- End of Content Wrapper -->
+	</div>
+	<!-- End of Page Wrapper -->
+	<script>
       const exports = {
       };
     </script>
 
-    <script src="https://play.pokemonshowdown.com/data/pokedex.js"></script>
-    <script>
+	<script src="https://play.pokemonshowdown.com/data/pokedex.js"></script>
+	<script>
       function rowTemplate(pokemon) {
         return (
           "<tr><td>" +
@@ -318,6 +290,23 @@
           "</td></tr>"
         );
       }
+      function pokeStats(stats){
+    	  const porcentage = 100/255;
+    	  return (
+    	'<h4 class="small font-weight-bold">Speed <span class="float-right">'+stats[0].base_stat+'</span></h4>'+
+		'<div class="progress mb-4"><div class="progress-bar bg-danger" role="progressbar" style="width: '+stats[0].base_stat*porcentage+'%" aria-valuenow="'+stats[0].base_stat+'" aria-valuemin="1" aria-valuemax="255"></div></div>'+
+		'<h4 class="small font-weight-bold">Special defense <span class="float-right">'+stats[1].base_stat+'</span></h4>'+
+		'<div class="progress mb-4"><div class="progress-bar bg-warning" role="progressbar" style="width: '+stats[1].base_stat*porcentage+'%" aria-valuenow="'+stats[1].base_stat+'" aria-valuemin="1" aria-valuemax="255"></div></div>'+
+		'<h4 class="small font-weight-bold">Special attack <span class="float-right">'+stats[2].base_stat+'</span></h4>'+
+		'<div class="progress mb-4"><div class="progress-bar" role="progressbar" style="width: '+stats[2].base_stat*porcentage+'%" aria-valuenow="'+stats[2].base_stat+'" aria-valuemin="1" aria-valuemax="255"></div></div>'+
+		'<h4 class="small font-weight-bold">Defense <span class="float-right">'+stats[3].base_stat+'</span></h4>'+
+		'<div class="progress mb-4"><div class="progress-bar bg-info" role="progressbar" style="width: '+stats[3].base_stat*porcentage+'%" aria-valuenow="'+stats[3].base_stat+'" aria-valuemin="1" aria-valuemax="255"></div></div>'+
+		'<h4 class="small font-weight-bold">Attack <span class="float-right">'+stats[4].base_stat+'</span></h4>'+
+		'<div class="progress mb-4"><div class="progress-bar bg-warning" role="progressbar" style="width: '+stats[4].base_stat*porcentage+'%" aria-valuenow="'+stats[4].base_stat+'" aria-valuemin="1" aria-valuemax="255"></div></div>'+
+		'<h4 class="small font-weight-bold">HP <span class="float-right">'+stats[5].base_stat+'</span></h4>'+
+		'<div class="progress"><div class="progress-bar bg-success" role="progressbar" style="width: '+stats[5].base_stat*porcentage+'%" aria-valuenow="'+stats[5].base_stat+'" aria-valuemin="1" aria-valuemax="255"></div></div>'
+    			);
+      }
       const hideClass = "d-none";
       function showPokemon(name) {
         fetch("/pokemon/" + name)
@@ -330,7 +319,9 @@
             document.getElementById("pokemonHeight").innerHTML =
               myPokemon.height;
             document.getElementById("pokemonWeight").innerHTML =
-              myPokemon.weight;
+                myPokemon.weight;
+            document.getElementById("pokemonStats").innerHTML =
+            	pokeStats(myPokemon.stats);
             document.getElementById("pokemonImage").src =
               "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
               myPokemon.id +
@@ -408,19 +399,19 @@
         http.send(fighters);
       }
     </script>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"> <i
+		class="fas fa-angle-up"></i>
+	</a>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap core JavaScript-->
+	<script src="/vendor/jquery/jquery.min.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Core plugin JavaScript-->
+	<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="/js/sb-admin-2.min.js"></script>
-  </body>
+	<!-- Custom scripts for all pages-->
+	<script src="/js/sb-admin-2.min.js"></script>
+</body>
 </html>
