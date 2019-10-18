@@ -16,7 +16,7 @@ public class BattleCalculator {
 				.mapToObj(index -> new ResultWrapper(index, fighters.get(index)))
 				.sorted(Comparator.comparing(ResultWrapper::getPokemon)).collect(Collectors.toList());
 		int fights = 0;
-		int previousDiference = 0;
+		int previousDiference = -1;
 		for (int fighterPosition = 0; fighterPosition < sortedParticipants.size(); fighterPosition++) {
 			ResultWrapper participant = sortedParticipants.get(fighterPosition);
 			int difference = fighterPosition - participant.resultPosition;
