@@ -16,10 +16,15 @@ public class BattleCalculator {
 				.mapToObj(index -> new ResultWrapper(index, fighters.get(index)))
 				.sorted(Comparator.comparing(ResultWrapper::getPokemon)).collect(Collectors.toList());
 		int fights = 0;
-
+		int previousDiference = 0;
 		for (int fighterPosition = 0; fighterPosition < sortedParticipants.size(); fighterPosition++) {
 			ResultWrapper participant = sortedParticipants.get(fighterPosition);
 			int difference = fighterPosition - participant.resultPosition;
+			// Comented trace to use when something goes wrong
+			// System.out.println(participant.getPokemon().getName() + ": "+ fighterPosition+" - "+participant.resultPosition+" = " +difference);
+			if(previousDiference == 0 && difference == 2) {
+				fights++;
+			}
 			if (difference > 2) {
 				throw new RuntimeException("It seems like the team rocket has changed the results. this one is imposible!");
 			}
@@ -27,7 +32,7 @@ public class BattleCalculator {
 				fights += difference;
 			}
 		}
-
+		// System.out.println("--------------------------------------------------");
 		return fights;
 	}
 

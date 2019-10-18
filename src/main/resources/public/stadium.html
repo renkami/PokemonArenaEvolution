@@ -178,8 +178,9 @@
                       It took place a minimun of
                       <span id="battleMin"></span> fights to get to this result.
                     </p>
+                    <div class="table-responsive d-none" id="pokemonTableMaster">
+                    
                     <p>Here are our fighters</p>
-                    <div class="table-responsive">
                       <table
                         class="table table-bordered"
                         id="dataTable"
@@ -191,8 +192,8 @@
                             <th>#</th>
                             <th><i class="fas fa-camera"></i></th>
                             <th>Name</th>
-                            <th>height (m)</th>
-                            <th>weight(kg)</th>
+                            <th class="d-none d-lg-table-cell">height (m)</th>
+                            <th class="d-none d-lg-table-cell">weight(kg)</th>
                             <th>Types</th>
                           </tr>
                         </thead>
@@ -201,8 +202,8 @@
                             <th>#</th>
                             <th><i class="fas fa-camera"></i></th>
                             <th>Name</th>
-                            <th>height (m)</th>
-                            <th>weight(kg)</th>
+                            <th class="d-none d-lg-table-cell">height (m)</th>
+                            <th class="d-none d-lg-table-cell">weight(kg)</th>
                             <th>Types</th>
                           </tr>
                         </tfoot>
@@ -275,7 +276,6 @@
     <!-- End of Page Wrapper -->
     <script>
       const exports = {
-        BattlePokedex: {}
       };
     </script>
 
@@ -297,9 +297,9 @@
           '\')" data-toggle="modal" data-target="#exampleModalCenter">' +
           pokemon.species +
           "</button>" +
-          "</td><td>" +
+          '</td><td class="d-none d-lg-table-cell">' +
           pokemon.heightm +
-          "</td><td>" +
+          '</td><td class="d-none d-lg-table-cell">' +
           pokemon.weightkg +
           "</td><td>" +
           pokemon.types.reduce(
@@ -318,8 +318,6 @@
           "</td></tr>"
         );
       }
-      const battleTemplate =
-        '<div class="col-6"><div class="result d-flex justify-content-center align-items-center w-100"><div class="d-flex flex-column justify-content-center align-items-center"></div></div></div>';
       const hideClass = "d-none";
       function showPokemon(name) {
         fetch("/pokemon/" + name)
@@ -351,6 +349,7 @@
         const battlers = JSON.parse(
           document.getElementById("pokefight_result").value.toLowerCase()
         );
+        showElement("result-container");
 
         let poketable = "";
         if (exports && exports.BattlePokedex) {
@@ -360,10 +359,10 @@
               poketable += rowTemplate(poke);
             }
           }
+          document.getElementById("pokemonTable").innerHTML = poketable;
+          showElement("pokemonTableMaster");
+          showElement("pokemonTable");
         }
-        document.getElementById("pokemonTable").innerHTML = poketable;
-        showElement("pokemonTable");
-        showElement("result-container");
       }
       function showError(error) {
         let errorMessage = "";
@@ -380,6 +379,7 @@
         document.getElementById("pokefight_result").value = "";
         hideElement("error-container");
         hideElement("result-container");
+        hideElement("pokemonTableMaster");
       }
       function validateBattles() {
         hideElement("error-container");
