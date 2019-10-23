@@ -247,6 +247,7 @@
 	</div>
 	<!-- End of Page Wrapper -->
 	<script>
+	const generalError = new Error("It seems that something went wrong... it must be team rocket sake!!")
       const exports = {
       };
     </script>
@@ -334,12 +335,9 @@
       function hideElement(element) {
         document.getElementById(element).classList.add(hideClass);
       }
-      function showFighters(amount) {
+      function showFighters(amount, battlers) {
         document.getElementById("battleMin").innerHTML = amount;
         let pokelist = "";
-        const battlers = JSON.parse(
-          document.getElementById("pokefight_result").value.toLowerCase()
-        );
         showElement("result-container");
 
         let poketable = "";
@@ -356,14 +354,10 @@
         }
       }
       function showError(error) {
-        let errorMessage = "";
         if (error.timestamp) {
-          errorMessage =
-            "It seems that something went wrong... it must be team rocket sake!!";
-        } else {
-          errorMessage = error.message;
+          error = generalError;
         }
-        document.getElementById("error-message").innerHTML = errorMessage;
+        document.getElementById("error-message").innerHTML = error.message;
         showElement("error-container");
       }
       function clearValidations() {
@@ -377,26 +371,35 @@
         hideElement("result-container");
         const http = new XMLHttpRequest();
         const url = "/tournament";
-        const fighters =
-          '{"pokefight_result":' +
-          document.getElementById("pokefight_result").value.toLowerCase() +
-          "}";
-        http.open("POST", url, true);
-        http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        let fighters = document.getElementById("pokefight_result").value.toLowerCase().trim();
+        let battlers = JSON.parse(fighters);
+        if(battlers){
+        	if(battlers.pokefight_result){
+        		battlers = battlers.pokefight_result;
+        	}else{
+        		fighters = '{"pokefight_result":' + fighters + "}";
+        	}
 
-        http.onreadystatechange = function() {
-          if (http.readyState == 4) {
-            const response = JSON.parse(http.responseText);
-            if (http.status == 200) {
-              if (!isNaN(response)) {
-                showFighters(response);
+            http.open("POST", url, true);
+            http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+            http.onreadystatechange = function() {
+              if (http.readyState == 4) {
+                const response = JSON.parse(http.responseText);
+                if (http.status == 200) {
+                  if (!isNaN(response)) {
+                    showFighters(response, battlers);
+                  }
+                } else {
+                  showError(response);
+                }
               }
-            } else {
-              showError(response);
-            }
-          }
-        };
-        http.send(fighters);
+            };
+            http.send(fighters);
+        }else{
+        	showError(generalError);
+        }
+        
       }
     </script>
 	<!-- Scroll to Top Button-->
