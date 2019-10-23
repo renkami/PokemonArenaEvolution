@@ -372,33 +372,39 @@
         const http = new XMLHttpRequest();
         const url = "/tournament";
         let fighters = document.getElementById("pokefight_result").value.toLowerCase().trim();
-        let battlers = JSON.parse(fighters);
-        if(battlers){
-        	if(battlers.pokefight_result){
-        		battlers = battlers.pokefight_result;
-        	}else{
-        		fighters = '{"pokefight_result":' + fighters + "}";
-        	}
+        try{
+            let battlers = JSON.parse(fighters);
 
-            http.open("POST", url, true);
-            http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            if(battlers){
+            	if(battlers.pokefight_result){
+            		battlers = battlers.pokefight_result;
+            	}else{
+            		fighters = '{"pokefight_result":' + fighters + "}";
+            	}
 
-            http.onreadystatechange = function() {
-              if (http.readyState == 4) {
-                const response = JSON.parse(http.responseText);
-                if (http.status == 200) {
-                  if (!isNaN(response)) {
-                    showFighters(response, battlers);
+                http.open("POST", url, true);
+                http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+                http.onreadystatechange = function() {
+                  if (http.readyState == 4) {
+                    const response = JSON.parse(http.responseText);
+                    if (http.status == 200) {
+                      if (!isNaN(response)) {
+                        showFighters(response, battlers);
+                      }
+                    } else {
+                      showError(response);
+                    }
                   }
-                } else {
-                  showError(response);
-                }
-              }
-            };
-            http.send(fighters);
-        }else{
-        	showError(generalError);
+                };
+                http.send(fighters);
+            }else{
+            	showError(generalError);
+            }
+        }catch(e){
+        	showError(new Error("It seems like its not team rocket faults this time. It is you using a non valid format..."));
         }
+    
         
       }
     </script>

@@ -21,7 +21,7 @@ public class BattleCalculator {
 			ResultWrapper participant = sortedParticipants.get(fighterPosition);
 			int difference = fighterPosition - participant.resultPosition;
 			// Comented trace to use when something goes wrong
-			 System.out.println(participant.getPokemon().getName() + ": "+ fighterPosition+" - "+participant.resultPosition+" = " +difference);
+			// System.out.println(participant.getPokemon().getName() + ": "+ fighterPosition+" - "+participant.resultPosition+" = " +difference);
 			if(previousDiference == 0 && difference == 2) {
 				fights++;
 			}
@@ -33,7 +33,7 @@ public class BattleCalculator {
 			}
 			previousDiference=difference;
 		}
-		 System.out.println("--------------------------------------------------");
+		// System.out.println("--------------------------------------------------");
 		return fights;
 	}
 
